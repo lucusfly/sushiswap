@@ -16,4 +16,5 @@ interface IUniswapV2Factory {
     function setFeeTo(address) external;
     function setFeeToSetter(address) external;
     function setMigrator(address) external;
+    function getInitCode() external pure returns (bytes32);
 }

@@ -57,4 +57,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         feeToSetter = _feeToSetter;
     }
 
+    function getInitCode() external override pure returns (bytes32) {
+        return keccak256(type(UniswapV2Pair).creationCode);
+    }
 }
